@@ -7,21 +7,16 @@ class Person:
         self.name = name_person
         self.address = 1
     
-    # métodos 
+    
+    def situation(self):
+        return '{}, you are in the street{}'.format(self.name,self.street)
+    
+    # methods
     def moving(self, velocity):
-        if velocity == "1":
+        if velocity == '1':
             self.address += 1
-        elif velocity == "2":
+        elif velocity == '2':
             self.address += 2
         else:
             self.address += 3
-
-jose = Person("Jose")
-
-
-print(jose.address)
-jose.moving("2")
-print(jose.address)
-jose.moving("3")
-print(jose.address)
 
